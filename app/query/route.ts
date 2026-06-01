@@ -9,14 +9,22 @@
      JOIN customers ON invoices.customer_id = customers.id
      WHERE invoices.amount = 666;
    `;
-   */
 
-    	const data = await sql`
+       	const data = await sql`
         SELECT invoices.amount, customers.name, customers.image_url, customers.email, invoices.id
       FROM invoices
       JOIN customers ON invoices.customer_id = customers.id
       ORDER BY invoices.date DESC
       LIMIT 5;
+   `;
+   */
+
+    	const data = await sql`
+        SELECT invoices.date,invoices.amount, customers.name, customers.image_url, customers.email, invoices.id
+      FROM invoices
+      JOIN customers ON invoices.customer_id = customers.id
+      ORDER BY invoices.date DESC
+    
    `;
 
 
