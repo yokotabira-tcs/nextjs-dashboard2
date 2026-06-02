@@ -1,4 +1,5 @@
 import React from 'react';
+import { Metadata } from 'next';
 
 import Pagination from '@/app/ui/invoices/pagination';
 import Search from '@/app/ui/search';
@@ -10,6 +11,9 @@ import { Suspense } from 'react';
  
 import { fetchInvoicesPages } from '@/app/lib/data';
  
+export const metadata: Metadata = {
+  title: 'Invoices',
+};
 
 /* export default async function Page() { */
 
